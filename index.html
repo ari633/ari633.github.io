@@ -1,3 +1,251 @@
-<h1>Hello world</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 0.5em 0 0;
+            font-size: 1.2em;
+        }
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 1em auto;
+            display: block;
+            border: 5px solid #fff;
+        }
+        .content {
+            max-width: 900px;
+            margin: 2em auto;
+            padding: 1em;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 2em;
+        }
+        .section h2 {
+            color: #333;
+            border-bottom: 2px solid #f4f4f9;
+            padding-bottom: 0.5em;
+        }
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills ul li {
+            background: #eee;
+            margin: 0.5em 0;
+            padding: 0.5em;
+            border-radius: 5px;
+        }
+        .contact {
+            text-align: center;
+            margin-top: 2em;
+        }
+        .contact a {
+            color: #333;
+            text-decoration: none;
+            border: 2px solid #333;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+        }
+        .contact a:hover {
+            background: #333;
+            color: #fff;
+        }
+        .job {
+            margin-bottom: 2em;
+        }
+        .job h2 {
+            margin: 0;
+            font-size: 1.2em;
+            border-bottom: none;
+            color: #333;
+        }
+        .job h3 {
+            margin: 0.5em 0 0;
+            font-size: 1em;
+            color: #555;
+        }
+        .job p {
+            margin: 0.5em 0;
+            line-height: 1.6;
+        }
+        .job ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .job ul li {
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ari Pratomo</h1>
+        <p>Frontend Engineer | Fullstack Engineer | Technical Architect</p>
+        <img src="data:image/jpeg;base64,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" class="profile-picture">
+    </header>
+    <div class="content">
+        <section class="about section">
+            <h2>About Me</h2>
+            <p>Ari, Software Engineer with 9+ years of experience mainly in frontend and web development, with some experience in cloud and backend APIs. Build interactive, user-friendly, and feature-rich website / web-based applications for eCommerce, payments, and fintech sectors.
+I am passionate about staying up-to-date with the latest industry trends and best practices in software engineering and web technology.</p>
+        </section>
+        <section class="portfolio section">
+            <h2>Portfolio</h2>
+            <p>
+              <a href="https://ajaib.co.id/" target="_blank">Ajaib.co.id</a> - 
+              <a href="https://www.linkaja.id/" target="_blank">LinkAja.id</a> - 
+              <a href="https://www.misteraladin.com/" target="_blank">MisterAladin.com</a>              
+            </p>
+        </section>
+        <section class="skills section">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Backend:</strong> Node.js, Express.js, Nest.js, Java, Spring Framework, PHP, MySQL, PostgreSQL, MongoDB.</li>
+                <li><strong>Frontend:</strong> JavaScript, React.js, Next.js, Vue.js, Nuxt.js, Svelte, HTML, CSS, SCSS.o</li>
+                <li><strong>Cloud: </strong>S3, CloudFront, Lambda, Elastic Beanstalk, EC2, Amplify, Compute Engine, App Engine,
+Cloud Functions, Firebase, Firestore.</li>
+            </ul>
+        </section>
+        <section class="experience section">
+            <h2>Experience</h2>
+            <div class="job">
+                <h2>PT Phincon | Senior IT Consultant</h2>
+                <h3>December 2023 - Present | Jakarta | Contract</h3>
+                <p>PT Phincon is a consulting company that provides IT solutions for enterprise clients.</p>
+                <ul>
+                    <li><strong>Solution Architect for Big Telco Project:</strong>
+                        <ul>
+                            <li>Design and implement technical architectures for clients, ensuring solutions align with technical requirements.</li>
+                            <li>Collaborated with stakeholders to gather and analyze business requirements, translating them into technical specifications and architectural designs.</li>
+                            <li>Analyzed existing systems to identify areas for improvement, implementing optimization strategies to enhance performance, scalability, and reliability.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
 
-Email: aripratomo@hotmail.com
+            <div class="job">
+                <h2>PT Ajaib Teknologi Indonesia (Ajaib.co.id) | Senior Web Engineer</h2>
+                <h3>May 2022 - October 2023 | Jakarta, Indonesia</h3>
+                <p>Ajaib is the fastest-growing series B-funded tech-powered online investment platform that allows Indonesians to buy and sell stocks, mutual funds, and crypto.</p>
+                <ul>
+                    <li>Developed user-facing investment platform using JavaScript, TypeScript, React.js, and Next.js.</li>
+                    <li>Responsible for developing the KYC Process and Registration Process, increasing user retention by 10% each month.</li>
+                    <li>Developed internal operations tools using Next.js to help non-tech divisions eliminate manual operations and processes.</li>
+                    <li>Refactored code by implementing a design system, migrating Redux to context, and implementing a mono-repo, enhancing long-term development culture.</li>
+                    <li>Worked closely with multiple stakeholders (Product, Design, QA) on planning and execution.</li>
+                    <li>Implemented Code Quality Metrics using SonarQube to analyze code quality and Unit-test coverage with a minimum of 60% coverage.</li>
+                    <li>Led and mentored a junior developer by assigning challenging tasks to foster growth, and reviewing the code.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h2>PT. Fintek Karya Nusantara (LinkAja.id) | Web Development Specialist</h2>
+                <h3>July 2019 - May 2022 | Jakarta, Indonesia</h3>
+                <p>LinkAja is Indonesia's leading e-money wallet and financial services platform.</p>
+                <ul>
+                    <li>Developed landing pages to increase the customer base and brand recognition.</li>
+                    <li>Created a custom content management system for web marketing and platform management.</li>
+                    <li>Developed backend API services using Node.js for content management systems for marketing websites.</li>
+                    <li>Developed front-end web applications using React.js and Svelte as web-view integrated into the LinkAja mobile application.</li>
+                    <li>Built internal ops platform web apps to eliminate human bottlenecks.</li>
+                    <li>Built reusable components and front-end libraries to enhance developer productivity.</li>
+                    <li>Collaborated with the product manager and UX designer to define requirements.</li>
+                    <li>Translated designs and wireframes into high-quality code.</li>
+                    <li>Maintained an internal Library UI-Kit.</li>
+                    <li>Regularly reviewed and refactored code to improve its quality and maintainability.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h2>Fundnel, Pte. Ltd. | Fullstack Software Engineer in Web</h2>
+                <h3>March 2016 - July 2019 | Jakarta, Indonesia</h3>
+                <p>Fundnel is a private investment platform offering unlisted securities in growth and pre-IPO stage companies across various industries.</p>
+                <ul>
+                  <li>
+                    Created a user-facing front-end application using Vue.js
+                  </li>
+                  <li>
+                    Developing content management system using YII PHP Framework, and MySQL
+                  </li>
+                  <li>
+                    Implemented AWS API Gateway to integrate with different service
+                  </li>
+                  <li>
+                    Created RESTFull API with Laravel and Expres.js
+                  </li>
+                  <li>
+                    Implemented AWS SES to send user notifications through email
+                  </li>
+                  <li>
+                    Implemented AWS SQS as a messaging service to handle asynchronous process
+                  </li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h2>PT MNC Aladin Indonesia (misteraladin.com) | Fullstack Software Engineer in Web</h2>
+                <h3>July 2015 - February 2016 | Jakarta, Indonesia</h3>
+                <p>Mister Aladin is a leading Online Travel Agency (OTA) based in Indonesia, owned by MNC Group, a multinational conglomerate.</p>
+                <ul>
+                    <li>Developed front-end using Vue.js.</li>
+                    <li>Developed RESTful API using Lumen PHP Framework.</li>
+                    <li>Developed CMS applications using YII PHP Framework.</li>
+                    <li>Implemented Apache SOLR for advanced full-text search.</li>
+                    <li>Implemented Redis for caching mechanisms.</li>
+                    <li>Wrote database migration scripts for MySQL.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h2>Netbuilder (M) Sdn. Bhd. | PHP Developer</h2>
+                <h3>March 2014 - June 2015 | Remote</h3>
+                <p>NetBuilder is a leading E-Commerce and Online Payment solution provider in Malaysia. It develops, provides, and consults on web-based business solutions, enabling clients to rapidly build, grow, and extend their online business channels.</p>
+                <ul>
+                    <li>Handled the software development life cycle for several client projects.</li>
+                    <li>Developed an e-commerce framework from scratch using PHP, MySQL, and JavaScript. This framework was consistently used by 20 clients annually, generating a revenue stream of 200,000 MYR per month.</li>
+                    <li>Integrated payment methods with ipay88.com and molpay.com.</li>
+                    <li>Developed backend applications over LAMP Stack.</li>
+                    <li>Provided technical documentation for maintenance and made quotations on core system customization.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="education section">
+            <h2>Education</h2>
+            <p>
+              <strong>Universitas Islam Indonesia</strong> | B.S in Computer Science | GPA: 3.02<br/>
+              <i>September 2008 - February 2014, Yogyakarta Indonesia</i>
+            </p>
+        </section>
+        <section class="contact section">
+            <h2>Contact</h2>
+            <p>You can reach me via email at <a href="mailto:aripratomo@hotmail.com">aripratomo@hotmail.com</a>.</p>
+            <p>Connect with me on <a href="https://www.linkedin.com/in/aripratomo/">LinkedIn</a> or follow me on <a href="https://github.com/ari633">GitHub</a>.</p>
+        </section>
+    </div>
+</body>
+</html>
